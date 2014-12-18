@@ -21,8 +21,8 @@ import java.util.Calendar;
              private int iDayOfWeek;
 
              private String sDOW;
-             private String sLineFromPoem;
-             private String[] saLinesOfPoem;
+             private String sLineFromcar;
+             private String[] saLinesOfcar;
              private String[] saDOW;
              private String sOutputMsg;
 
@@ -71,31 +71,31 @@ import java.util.Calendar;
                  return sDOW;
              }
 
-             private void setsLineFromPoem(int iPoemLine) {
-                 this.sLineFromPoem = saLinesOfPoem[iPoemLine];
+             private void setsLineFromcar(int icarLine) {
+                 this.sLineFromcar = saLinesOfcar[icarLine];
              }
 
-             public String getsLineFromPoem()
+             public String getsLineFromcar()
 
              {
-                 return sLineFromPoem;
+                 return sLineFromcar;
              }
 
-             private void setSaLinesOfPoem()
+             private void setSaLinesOfcar()
                  {
 
-                     saLinesOfPoem = new String[7];
-                     saLinesOfPoem[0] = "has a 2.0 litre diesel engine which produces 143 BHP and a 0-62 time of 8.6 seconds.";
-                     saLinesOfPoem[1] = "has a 5.0litre V12 producing 517 BHP and a 0-62 time of 4.5 seconds.";
-                     saLinesOfPoem[2] = "has a 1.6 litre turbocharges engine producing 182 BHP and a 0-62 time of 6.9 seconds";
-                     saLinesOfPoem[3] = "has a 4.2 litre V8 producing 395 BHP and a 0-62 tim eof 5.2 seconds.";
-                     saLinesOfPoem[4] = "has a 4.3 litre V8 engine producing 460 BHP and a 0-62 time of 4.0 seconds.";
-                     saLinesOfPoem[5] = "has a 6.2 litre V8 engine producing 437 BHP and has a 0-62 time of 4.3 seconds.";
-                     saLinesOfPoem[6] = "has a 2.0 litre turbocharged engine producing 210 BHP and has a 0-62 time of 6.9 seconds.";
+                     saLinesOfcar = new String[7];
+                     saLinesOfcar[0] = "has a 2.0 litre diesel engine which produces 143 BHP and a 0-62 time of 8.6 seconds.";
+                     saLinesOfcar[1] = "has a 5.0litre V12 producing 517 BHP and a 0-62 time of 4.5 seconds.";
+                     saLinesOfcar[2] = "has a 1.6 litre turbocharges engine producing 182 BHP and a 0-62 time of 6.9 seconds";
+                     saLinesOfcar[3] = "has a 4.2 litre V8 producing 395 BHP and a 0-62 tim eof 5.2 seconds.";
+                     saLinesOfcar[4] = "has a 4.3 litre V8 engine producing 460 BHP and a 0-62 time of 4.0 seconds.";
+                     saLinesOfcar[5] = "has a 6.2 litre V8 engine producing 437 BHP and has a 0-62 time of 4.3 seconds.";
+                     saLinesOfcar[6] = "has a 2.0 litre turbocharged engine producing 210 BHP and has a 0-62 time of 6.9 seconds.";
                  }
-                 public String[] getSaLinesOfPoem ()
+                 public String[] getSaLinesOfcar ()
                  {
-                     return saLinesOfPoem;
+                     return saLinesOfcar;
                  }
 
 
@@ -130,7 +130,7 @@ import java.util.Calendar;
              public martinFriedberg() {
                  // Fill the arrays
                  setSaDOW();
-                 setSaLinesOfPoem();
+                 setSaLinesOfcar();
                  // Use the Calendar to instantiate a calendar object for today's date
                  Calendar cCal = Calendar.getInstance();
                  // store the date, month, year
@@ -142,23 +142,23 @@ import java.util.Calendar;
              public martinFriedberg(int mfDOW, int mfMonth, int mfYear) {
                  // Fill the arrays
                  setSaDOW();
-                 setSaLinesOfPoem();
+                 setSaLinesOfcar();
                  // store the date, month, year
                  setiDOW(mfDOW);
                  setiMonth(mfMonth);
                  setiYear(mfYear);
                  // Use the GregorianCalendar to instantiate a calendar object
-                 GregorianCalendar gcBDay = new GregorianCalendar(mfYear, mfMonth, mfDOW);
+                 GregorianCalendar gcCday = new GregorianCalendar(mfYear, mfMonth, mfDOW);
                  // Set the day of the week integer using the date chosen
-                 setiDayOfWeek(gcBDay.get(Calendar.DAY_OF_WEEK)-1)
+                 setiDayOfWeek(gcCday.get(Calendar.DAY_OF_WEEK)-1)
                  ;
                  // Set the string day of the week
                  setsDOW(getiDayOfWeek());
-                 // Set the line from the poem based on the integer day of the week
-                 setsLineFromPoem(getiDayOfWeek());
+                 // Set the line from the car based on the integer day of the week
+                 setsLineFromcar(getiDayOfWeek());
                  // Create temporary string for output message
-                 String sTempStr = "The car selected, " + getsDOW() + "\n" +
-                         getsLineFromPoem();
+                 String sTempStr = "This date uses a, " + getsDOW() + "\n" +
+                         getsLineFromcar();
                  setsOutputMsg(sTempStr);
              }
          }

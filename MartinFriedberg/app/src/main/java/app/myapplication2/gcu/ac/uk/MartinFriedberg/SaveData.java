@@ -20,7 +20,7 @@ import android.app.Activity;
              private int mfSDDOW;
      private int mfSDMonth;
      private String mfSDDayBorn;
-             private String mfSDStarSign;
+             private String mfSD;
 
     
              // *********************************************
@@ -43,16 +43,16 @@ import android.app.Activity;
 
          }
 
-             public void setmfSDStarSign(String mfSDStarSign)
+             public void setmfSD(String mfSD)
              {
-                 this.mfSDStarSign = mfSDStarSign;
-                 setmfSDStarSign("January");
+                 this.mfSD = mfSD;
+                 setmfSD("January");
 
              }
 
-             public String getmfSDStarSign()
+             public String getmfSD()
              {
-                 return mfSDStarSign;
+                 return mfSD;
              }
     
              public int getmfSDMonth()
@@ -111,6 +111,6 @@ import android.app.Activity;
          savePreferences("mf_DOW", 1);
          savePreferences("mf_Month", 1);
          savePreferences("mf_DayBorn", "Empty");
-         savePreferences("mf_StarSign", "Empty");
+         savePreferences("mf_", "Empty");
          }
      }

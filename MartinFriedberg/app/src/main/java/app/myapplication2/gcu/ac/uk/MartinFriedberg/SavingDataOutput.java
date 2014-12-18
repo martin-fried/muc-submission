@@ -23,7 +23,7 @@ public class SavingDataOutput extends Activity implements View.OnClickListener {
     TextView mfSDODOW;
     TextView mfSDOMonth;
     TextView mfSDODayBorn;
-    TextView mfSDStarSign;
+    TextView mfSD;
     Button btnSavedData;
     android.app.FragmentManager fmAboutDialogue;
 
@@ -42,7 +42,7 @@ public class SavingDataOutput extends Activity implements View.OnClickListener {
         mfSDODOW = (TextView) findViewById(R.id.tvDOW);
         mfSDOMonth = (TextView) findViewById(R.id.tvMonth);
         mfSDODayBorn = (TextView) findViewById(R.id.tvCarName);
-        mfSDStarSign = (TextView) findViewById(R.id.tvCarDesc);
+        mfSD = (TextView) findViewById(R.id.tvCarDesc);
         //Load any saved preferences
         mfSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         loadSavedPreferences();
@@ -53,7 +53,7 @@ public class SavingDataOutput extends Activity implements View.OnClickListener {
         mfSDODOW.setText(mfSDODOW.getText() + String.valueOf(mfSharedPrefs.getInt("mf_DOW", 1)));
         mfSDOMonth.setText(mfSDOMonth.getText() + String.valueOf(mfSharedPrefs.getInt("mf_Month", 1)));
         mfSDODayBorn.setText(mfSDODayBorn.getText() + String.valueOf(mfSharedPrefs.getString("mf_DayBorn", "Sunday")));
-        mfSDStarSign.setText(mfSDStarSign.getText() + mfSharedPrefs.getString("mf_StarSign", "January"));
+        mfSD.setText(mfSD.getText() + mfSharedPrefs.getString("mf_", "January"));
     }
 
     public void onClick(View view) {

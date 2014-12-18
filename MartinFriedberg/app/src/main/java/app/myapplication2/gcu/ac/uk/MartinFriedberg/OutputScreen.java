@@ -27,7 +27,7 @@ public class OutputScreen extends ActionBarActivity implements View.OnClickListe
 
     Button btnPickDate;
     Button btnSavedData;
-    TextView tvStarSign;
+    TextView tv;
     android.app.FragmentManager fmAboutDialogue;
 
     @Override
@@ -37,11 +37,11 @@ public class OutputScreen extends ActionBarActivity implements View.OnClickListe
 
 
 // Get car news from RSS Feed
-        RSSDataItem userHoroscope = new RSSDataItem();
+        RSSDataItem userCar = new RSSDataItem();
         String RSSFeedURL = "http://www.autocar.co.uk/rss";
         AsyncRSSParser rssAsyncParse = new AsyncRSSParser(this,RSSFeedURL);
         try {
-            userHoroscope = rssAsyncParse.execute("").get();
+            userCar = rssAsyncParse.execute("").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -54,7 +54,7 @@ public class OutputScreen extends ActionBarActivity implements View.OnClickListe
         btnPickDate.setOnClickListener(this);
         btnSavedData.setOnClickListener(this);
 
-        tvStarSign = (TextView) findViewById(R.id.tvCarDesc);
+        tv = (TextView) findViewById(R.id.tvCarDesc);
 
         TextView mfOutput = (TextView) findViewById(R.id.tvOutputMsg);
 

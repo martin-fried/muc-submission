@@ -62,11 +62,11 @@ public class RSSDataItem implements Serializable {
 
     @Override
     public String toString() {
-        String starSignRSSHoroscopeData;
-        starSignRSSHoroscopeData = "RSSDataItem [itemTitle=" + itemTitle;
-        starSignRSSHoroscopeData = ", itemDesc=" + itemDesc;
-        starSignRSSHoroscopeData = ", itemLink=" + itemLink +"]";
-        return starSignRSSHoroscopeData;
+        String RSSCarData;
+        RSSCarData = "RSSDataItem [itemTitle=" + itemTitle;
+        RSSCarData = ", itemDesc=" + itemDesc;
+        RSSCarData = ", itemLink=" + itemLink +"]";
+        return RSSCarData;
     }
 
 }

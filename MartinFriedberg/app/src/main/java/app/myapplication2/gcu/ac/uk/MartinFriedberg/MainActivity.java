@@ -29,7 +29,7 @@ import app.myapplication2.gcu.ac.uk.martinfriedberg.R;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
-    DatePicker dpBDay;
+    DatePicker dpCday;
     Button submitBtn;
     SaveData SDPrefs;
     SharedPreferences mySharedPrefs;
@@ -45,8 +45,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //Create an instance of the DatePicker Object
-        dpBDay = (DatePicker) findViewById(R.id.datePicker);
-        dpBDay.setCalendarViewShown(false);
+        dpCday = (DatePicker) findViewById(R.id.datePicker);
+        dpCday.setCalendarViewShown(false);
 
 // Setup, access and listen for the submit button
         submitBtn = (Button) findViewById(R.id.submitBtn);
@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        martinFriedberg YourDay = new martinFriedberg(dpBDay.getDayOfMonth(),dpBDay.getMonth(),dpBDay.getYear());
+        martinFriedberg YourDay = new martinFriedberg(dpCday.getDayOfMonth(),dpCday.getMonth(),dpCday.getYear());
 
         //Save Preferences
         SDPrefs.savePreferences("DOW", YourDay.getiDOW());
